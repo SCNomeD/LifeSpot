@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
 </head>
+
 <body>
     <!--Хедер страницы находится сразу над тегом body-->
     <header id="header-index">
@@ -12,20 +15,41 @@
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
+        <!--Проверка возраста-->
+        <script>
+            // Проверка на возраст
+            //checkAge();
+
+            // сохранение сессии
+            handleSession()
+
+            // вывод данных сессии в консоль
+            sessionLog();
+
+            // вывод рекламы
+            ShowAdvertising();
+
+            // функция для получения пользовательского ввода
+            const inputParseFunction = function () {
+                return document.getElementsByTagName('input')[0].value.toLowerCase();
+            }
+        </script>
         <!--Строка поиска-->
         <div class="search">
             <form>
-                <input type="text" placeholder="Искать здесь..." oninput="searchName">
+                <input type="text" placeholder="Искать здесь..." oninput="filterContent( inputParseFunction )" size=50%>
             </form>
         </div>
     </header>
+
     <!--Мэйн - основная часть контента страницы-->
     <main>
         <!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
         <aside id="sidebar">
             <div class="navbar">
                 <a href="/"><p>Все трансляции</p></a>
-                <a href="/"><p>О проекте</p></a>
+                <a href="/about"><p>О проекте</p></a>
+                <a href="/testing"><p>Тестирование</p></a>
             </div>
         </aside>
         <div class="video-container">
@@ -44,10 +68,12 @@
             <h3 class="video-title">Венеция, виды Италии</h3>
         </div>
     </main>
+
     <!--Футер страницы находится под основной частью (body)-->
     <footer>
         <p>LifeSpot - все права защищены</p>
         <p>Связаться с нами: contact@lifespot.ru</p>
     </footer>
 </body>
+
 </html>
