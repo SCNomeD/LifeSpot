@@ -17,17 +17,11 @@
         <p>Покажем, что происходит прямо сейчас</p>
         <!--Проверка возраста-->
         <script>
-            // Проверка на возраст
-            //checkAge();
-
-            // сохранение сессии
-            handleSession()
-
-            // вывод данных сессии в консоль
-            sessionLog();
-
             // вывод рекламы
             ShowAdvertising();
+
+            // обработка сессии
+            handleSession(logger, checker);
 
             // функция для получения пользовательского ввода
             const inputParseFunction = function () {

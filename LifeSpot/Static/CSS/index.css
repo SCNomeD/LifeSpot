@@ -80,3 +80,26 @@ header, footer, body, .video-container {
     padding-left: 1%;
     padding-top: 1%;
 }
+
+/* Slider */
+.slider {
+    width: 1000px;
+    height: 408px;
+    background-color: rgb(200, 200, 200);
+}
+
+.hidden {
+    display: none;
+}
+
+#btnPrev {
+    position: relative;
+    top: -220px;
+    left: 20px;
+}
+
+#btnNext {
+    position: relative;
+    top: -220px;
+    left: 925px;
+}
